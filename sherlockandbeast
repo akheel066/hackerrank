@@ -1,0 +1,33 @@
+def decentNumber(n):
+    # Write your code here
+    if n<=5:
+        if n==3:
+            print("555")
+        elif n==5:
+            print("33333")
+        else:
+            print(-1)
+    else:
+    # Write your code here
+        s='5'*n
+        # print(s)
+        c=1
+        j=0
+        while (5*j)<=n:
+            if s.count('5')%3!=0 or s.count('3')%5!=0:
+                # print(1)
+                s=s[:len(s)-(5*c)]+'3'*(5*c)
+                
+            else:
+                print(s)
+                # print(2)
+                return
+                break
+            c+=1
+            j+=1
+            # print(c)
+        print(-1)
+t=int(input())
+for i in range(t):
+    n=int(input())
+    decentNumber(n)
